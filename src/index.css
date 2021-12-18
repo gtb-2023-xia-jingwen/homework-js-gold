@@ -1,0 +1,12 @@
+body,
+ul,
+ol,
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}

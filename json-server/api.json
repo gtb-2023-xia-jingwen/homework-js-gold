@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "category": "fruit",
+      "price": 5.0,
+      "name": "苹果",
+      "unit": "斤"
+    },
+    {
+      "id": 2,
+      "category": "fruit",
+      "price": 4.0,
+      "name": "香蕉",
+      "unit": "斤"
+    },
+    {
+      "id": 3,
+      "category": "fruit",
+      "price": 15.0,
+      "name": "草莓",
+      "unit": "斤"
+    },
+    {
+      "id": 4,
+      "category": "fruit",
+      "price": 3.0,
+      "name": "西瓜",
+      "unit": "斤"
+    },
+    {
+      "id": 5,
+      "category": "Beverages",
+      "price": 5.0,
+      "name": "可乐",
+      "unit": "听"
+    },
+    {
+      "id": 6,
+      "category": "Beverages",
+      "price": 5.0,
+      "name": "雪碧",
+      "unit": "听"
+    },
+    {
+      "id": 7,
+      "category": "fruit",
+      "price": 5.0,
+      "name": "健力宝",
+      "unit": "听"
+    },
+    {
+      "id": 8,
+      "category": "fruit",
+      "price": 5.0,
+      "name": "牛奶",
+      "unit": "盒"
+    }
+  ]
+}
