@@ -33,10 +33,10 @@
 npm install
 ```
 
-### 运行测试
+### 启动应用
 
 ```bash
-npm test
+npm start
 ```
 
 ### 启动 Json Server 
