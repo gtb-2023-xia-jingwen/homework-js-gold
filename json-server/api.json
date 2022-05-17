@@ -1,20 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "category": "Beverages",
-      "price": 5,
-      "name": "雪碧2",
-      "unit": "听"
-    },
-    {
-      "id": 2,
-      "category": "fruit",
-      "price": 5,
-      "name": "健力宝2",
-      "unit": "听"
-    },
-    {
       "id": 6,
       "category": "Beverages",
       "price": 5,
