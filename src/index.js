@@ -24,30 +24,36 @@ res.then((datas)=>{
     }
     ul = document.querySelector(".products");
     ul.innerHTML = htmlTxt;
+    
 });
 
 // 显示删除按钮
-ul = document.querySelector(".products");
-ul.addEventListener("mouseover", e => toggleBtn(e, true));
-ul.addEventListener("mouseout", e => toggleBtn(e, false));
-function toggleBtn(e, turnOn){
-    console.log(e);
-    let target = e.target;
-    tagName = target.tagName;
-    let btn = null; 
-    if (tagName == "LI" || tagName == "DIV") {
-        btn = target.querySelector('button');
-    }
-    else if (tagName == "IMG" || tagName == "H3") {
-        btn = target.parentNode.querySelector('button');
-    }
-    else if (tagName == "H4") {
-        btn = target.parentNode.querySelector('button');
-    }
-    if(btn == null) return;
-    if(turnOn) {
-        btn.setAttribute("style", "display:block");
-    }else {
-        btn.setAttribute("style", "display:none");
+function displayDelBtn() {
+    ul = document.querySelector(".products");
+    if(ul == null) return;
+    ul.addEventListener("mouseover", e => toggleBtn(e, true), true);
+    ul.addEventListener("mouseout", e => toggleBtn(e, false), true);
+    function toggleBtn(e, turnOn){
+        let target = e.target;
+        tagName = target.tagName;
+        let btn = null;
+        if (tagName == "LI" || tagName == "DIV" || tagName == 'UL') {
+            btn = target.querySelector('button');
+        }
+        else if (tagName == "IMG" || tagName == "H3") {
+            btn = target.parentNode.querySelector('button');
+        }
+        else if (tagName == "H4" || tagName == "BUTTON") {
+            btn = target.parentNode.querySelector('button');
+        }
+        if(btn == null) return;
+        if(turnOn) {
+            btn.setAttribute("style", "display:block");
+        }else {
+            btn.setAttribute("style", "display:none");
+        }
     }
 }
+displayDelBtn();
+
+//
