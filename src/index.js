@@ -24,15 +24,14 @@ res.then((datas)=>{
     }
     ul = document.querySelector(".products");
     ul.innerHTML = htmlTxt;
-    
 });
 
 // 显示删除按钮
 function displayDelBtn() {
     ul = document.querySelector(".products");
     if(ul == null) return;
-    ul.addEventListener("mouseover", e => toggleBtn(e, true), true);
-    ul.addEventListener("mouseout", e => toggleBtn(e, false), true);
+    ul.addEventListener("mouseover", e => toggleBtn(e, true));
+    ul.addEventListener("mouseout", e => toggleBtn(e, false));
     function toggleBtn(e, turnOn){
         let target = e.target;
         tagName = target.tagName;
@@ -49,11 +48,25 @@ function displayDelBtn() {
         if(btn == null) return;
         if(turnOn) {
             btn.setAttribute("style", "display:block");
+            btn.addEventListener('click', delProduct); // 绑定事件
         }else {
+            btn.removeEventListener('click', delProduct); // 删除事件
             btn.setAttribute("style", "display:none");
         }
     }
 }
 displayDelBtn();
 
-//
+function delProduct(e) {
+    let btn = e.target;
+    let li = btn.parentNode.parentNode;
+    let id =li.getAttribute("id");
+    // 执行删除操作
+    const DELETE_URL = `http://localhost:3000/products/${id}`;
+    console.log(DELETE_URL);
+    fetch(DELETE_URL, {method: 'DELETE'})
+        .then(res => res.json())
+        .then(res => console.log(res))
+    btn.removeEventListener('click', delProduct); // 删除事件
+    document.querySelector(".products").removeChild(li); // 删除该节点
+}
