@@ -10,3 +10,41 @@ ul,
 ol {
   list-style-type: none;
 }
+
+body {
+  background-color: lightgray;
+}
+
+main {
+  width: 60%;
+  background-color: white;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+li{
+  border: 1px solid lightgray;
+  box-shadow: lightgray 0 0 5px;
+  border-radius: 5px;
+}
+
+li h3 {
+  margin: 0;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+li h4 {
+  margin: 0;
+  font-weight: normal;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
